@@ -1,0 +1,49 @@
+# Site settings
+title: AlphaPost - The new era of social media management
+email:
+description: The new era of social media management, AlphaPost is a free alternative to Buffer and HootSuite.
+repository: AlphaPost/AlphaPost.github.io.
+baseurl: "" # the subpath of your site, e.g. /blog/ (If you use organization leave empty)
+url: "http://alphapost.io" # the base hostname & protocol for your site
+
+google_analytics: "UA-88051459-1"
+#addthis_id: ra-5644da281510c62f
+#disqus_account: jeky-new-age
+
+# Social networks usernames (many more available: flickr, dribbble, pinterest, instagram, tumblr, linkedin, etc.) see all icon at fontawesome.io
+social:
+  - title: twitter
+    url: https://twitter.com/AlphaPostApp
+  #- title: facebook
+  #  url: https://facebook.com/lantoniotrento
+  #- title: google-plus
+  #  url: https://plus.google.com/+AntoniotrentoIt
+  #- title: github
+  #  url: http://github.com/jekyll
+
+# Build settings
+markdown: kramdown
+highlighter: rouge
+permalink: /blog/:title
+paginate: 5
+exclude: ["less","node_modules","Gruntfile.js","package.json","README.md"]
+
+gems: [jekyll-paginate, jekyll-feed, jekyll-sitemap, jekyll-admin, jekyll-seo-tag]
+#Use this gem: https://github.com/pattex/jekyll-tagging
+# Build settings
+
+
+# compress settings
+compress_html:
+  clippings: all
+  comments: all
+  endings: []
+  ignore:
+    envs: []
+  blanklines: false
+  profile: false
+  startings: []
+
+#SEO
+twitter:
+  username: AlphaPostApp

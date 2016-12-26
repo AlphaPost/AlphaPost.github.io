@@ -1,0 +1,37 @@
+
+<div class="nc_socialPanel swp_flatFresh swp_d_fullColor swp_i_fullColor swp_o_lightGray scale-100 scale-fullWidth">
+   
+    <div class="nc_tweetContainer googlePlus"><a rel="nofollow" target="_blank" href="https://plus.google.com/share?url={{site.url}}{{page.url}}" class="nc_tweet"><span class="iconFiller"><span class="spaceManWilly"><i class="sw sw-google-plus"></i><span class="swp_share">+1</span></span></span><span class="swp_count">
+    	{% if page.sharecount %}{{ page.sharecount.google }}{% else %}{{ 143 }}{% endif %}
+    </span></a>
+    </div>
+
+    <div class="nc_tweetContainer nc_pinterest"><a rel="nofollow" href="https://pinterest.com/pin/create/bookmarklet/?media={{page.header-img}}&url={{{site.url}}{{page.url}}}&description={{page.title}}" class="nc_tweet"><span class="iconFiller"><span class="spaceManWilly"><i class="sw sw-pinterest"></i><span class="swp_share">Pin</span></span></span><span class="swp_count">
+    {% if page.sharecount %}{{ page.sharecount.pinterest }}{% else %}{{ 86 }}{% endif %}
+    </span></a>
+    </div>
+
+    <div class="nc_tweetContainer twitter"><a rel="nofollow" target="_blank" href="https://twitter.com/intent/tweet?url={{site.url}}{{page.url}}&text={{page.title}}&hashtags=AlphaPost" class="nc_tweet"><span class="iconFiller"><span class="spaceManWilly"><i class="sw sw-twitter"></i><span class="swp_share"> Tweet</span></span></span><span class="swp_count">
+    {% if page.sharecount %}{{ page.sharecount.twitter }}{% else %}{{ 109 }}{% endif %}</span></a>
+    </div>
+
+    <div class="nc_tweetContainer swp_fb"><a rel="nofollow" target="_blank" href="http://www.facebook.com/sharer.php?u={{site.url}}{{page.url}}" class="nc_tweet"><span class="iconFiller"><span class="spaceManWilly"><i class="sw sw-facebook"></i><span class="swp_share">Share</span></span></span><span class="swp_count">
+    {% if page.sharecount %}{{ page.sharecount.facebook }}{% else %}{{ 152 }}{% endif %}</span></a>
+    </div>
+
+    <div class="nc_tweetContainer swp_reddit"><a rel="nofollow" target="_blank" href="https://reddit.com/submit?url={{site.url}}{{page.url}}&title={{page.title}}" class="nc_tweet"><span class="iconFiller"><span class="spaceManWilly"><i class="sw sw-reddit"></i><span class="swp_share">Reddit</span></span></span><span class="swp_count">
+    {% if page.sharecount %}{{ page.sharecount.reddit }}{% else %}{{ 87 }}{% endif %}</span></a>
+    </div>
+
+    <div class="nc_tweetContainer totes totesalt"><span class="swp_count"><span class="swp_label">Shares</span>
+     {% if page.sharecount %}
+     {% assign r = page.sharecount.reddit %}
+     {% assign g = page.sharecount.google %}
+     {% assign t = page.sharecount.twitter %}
+     {% assign p = page.sharecount.pinterest %}
+     {% assign fb = page.sharecount.facebook %}
+     {% assign total = r| plus:fb| plus:g| plus:t| plus:p %}
+     {{total}}
+     {% else %}{{ 87 }}{% endif %}</span>
+    </div>
+</div>

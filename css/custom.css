@@ -1,0 +1,16 @@
+ul {
+	font-size: 1.3em;
+}
+ul ul {
+	font-size: 1em;
+}
+
+
+#go-top {
+  text-align: right;
+  transition-duration: 1s;
+  position: fixed;
+  right: 6%;
+  bottom: 6%;
+  display: none;
+}
